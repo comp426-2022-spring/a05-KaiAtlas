@@ -63,12 +63,12 @@ app.use((req, res, next)=>{
   next()
 })
 
-// app.get('/app/', (req, res) =>{
-//   res.statusCode = 200;
-//   res.statusMessage = 'OK';
-//   res.writeHead( res.statusCode, { 'Content-Type' : 'text/plain' });
-//   res.end(res.statusCode+ ' ' +res.statusMessage)
-// })
+app.get('/app/', (req, res) =>{
+  res.statusCode = 200;
+  res.statusMessage = 'OK';
+  res.writeHead( res.statusCode, { 'Content-Type' : 'text/plain' });
+  res.end(res.statusCode+ ' ' +res.statusMessage)
+})
 
 if (args.debug){
   app.get("/app/log/access", (req, res)=>{
