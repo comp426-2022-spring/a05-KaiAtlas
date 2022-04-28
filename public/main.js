@@ -19,7 +19,7 @@ function flipCoin(){
     .then(function(something){
         console.log(something)
         document.getElementById("result").innerHTML=something.flip
-        //document.getElementById("quarter").setAttribute("src", something.flip+".png")
+        document.getElementById("quarter").setAttribute("src", something.flip+".png")
         coin.disabled = true
     })
 }
@@ -44,6 +44,8 @@ const coins = document.getElementById("coins")
 					console.log(flips);
 					document.getElementById("heads").innerHTML = "Heads: "+flips.summary.heads;
 					document.getElementById("tails").innerHTML = "Tails: "+flips.summary.tails;
+                    document.getElementById("quarter2").setAttribute("src", "heads.png")
+                    document.getElementById("quarter3").setAttribute("src", "tails.png")
 				} catch (error) {
 					console.log(error);
 				}
@@ -89,7 +91,8 @@ const coins = document.getElementById("coins")
                     document.getElementById("result2").innerHTML="Result: "+sth.result
                     document.getElementById("call").innerHTML="Your guess: "+sth.call
                     document.getElementById("actual").innerHTML="Flip: "+sth.flip
-                    //document.getElementById("quarter").setAttribute("src", something.flip+".png")
+                    document.getElementById("quarter4").setAttribute("src", sth.call+".png")
+                    document.getElementById("quarter5").setAttribute("src", sth.flip+".png")
                     coin.disabled = true
                 })
             }
