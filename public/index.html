@@ -27,23 +27,49 @@
   </head>
   <body>
     <nav>
-      <button id="homenav">Home</button>
-      <button id="singlenav">Flip one coin</button>
-      <button id="multinav">Flip multiple coins</button>
-      <button id="guessnav">Guess the result</button>
+      <button id="homenav" onclick="focusbutton('home')">Home</button>
+      <button id="singlenav" onclick="focusbutton('single')">Flip one coin</button>
+      <button id="multinav" onclick="focusbutton('multi')">Flip multiple coins</button>
+      <button id="guessnav" onclick="focusbutton('guess')">Guess the result</button>
     </nav>
     <div id="home">
-      
+      <h1>Welcome!</h1>
     </div>    
     <div id="single" class="hidden">
-      
+      <h1>Flip one coin</h1>
+      <button id="coin">Flip?</button>
+        <p>Result: <span id="result"></span></p>
+        <img src="blt.png" id="quarter" width="200" height="200">
     </div>
     <div id="multi" class="hidden">
-      
+      <h1>Flip many coins</h1>
+			<form id="coins">
+				<label for="number">
+					<strong>How many coins?</strong>
+				</label>
+				<input type="number" name="number" id="number">
+				<input type="submit" value="Flip 'em!">
+			</form>
+
+			<h2>Results</h2>
+				<p id="heads"></p>
+        <img src="blt.png" id="quarter2" width="200" height="200">
+				<p id="tails"></p>
+        <img src="blt.png" id="quarter3" width="200" height="200">
     </div>
+
     <div id="guess" class="hidden">
-      
+      <h1>Lets play a game</h1>
+			<button id="head" onclick="newGuess('heads')">Head</button>
+      <button id="tail" onclick="newGuess('tails')">Tail</button>
+			<h2>Results</h2>
+      <p id="call"></p>
+      <img src="blt.png" id="quarter4" width="200" height="200">
+      <p id="actual"></p>
+      <img src="blt.png" id="quarter5" width="200" height="200">
+				<p id="result2"></p>
     </div>
+
 	<script src="main.js"></script>
   </body>
 </html>
